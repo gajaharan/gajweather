@@ -20,6 +20,14 @@
   ],
   "dependencies": {
     "angular": "~1.4.5",
-    "bootstrap": "~3.3.6"
-  }
+    "bootstrap": "~3.3.5"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }  
 }

@@ -3,6 +3,8 @@ var concat = require('gulp-concat');
 var filter = require('gulp-filter');
 var mainBowerFiles = require('main-bower-files');
 var webserver = require('gulp-webserver');
+var uglify = require('gulp-uglifyjs');
+var minifyCSS = require('gulp-minify-css');
 
 var config = {
   scripts: {
@@ -33,10 +35,13 @@ gulp.task('lib', function() {
   return gulp.src(mainBowerFiles())
     .pipe(jsFilter)
     .pipe(concat('lib.js'))
+    .pipe(uglify())    
     .pipe(gulp.dest('./dist'))
     .pipe(gulp.dest('./src/bundle'))
+    .pipe(jsFilter.restore)
     .pipe(cssFilter)
     .pipe(concat('lib.css'))
+    .pipe(minifyCSS())    
     .pipe(gulp.dest('./dist'))
     .pipe(gulp.dest('./src/bundle'));
 });

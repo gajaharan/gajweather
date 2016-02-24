@@ -28,6 +28,6 @@ app.controller('forecastCtrl', ['$scope', '$filter','openWeatherMap', function($
     };
 
 	 $scope.parseDate = function (date) {
-	    return  $filter('date')(new Date(date * 1000), 'fullDate');
+	    return  $filter('date')(new Date(date * 1000), 'EEEE');
 	};   
  }]);

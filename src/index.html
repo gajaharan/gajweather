@@ -34,11 +34,11 @@
             </div>
             <div class="col-sm-12" ng-repeat="forecastItem in forecast.list">
 				<div class="weather-container">
-				    <div>
-				        <div>{{parseDate(forecastItem.dt)}}</div>
-				        <img ng-src="{{getIconUrl(forecastItem.weather[0].icon)}}" />
-				        <div>{{forecastItem.temp.day}}&#176;C</div>
-				        <div>{{forecastItem.weather[0].description}}</div>
+				    <div class="info-body">
+				        <div class="day-title">{{parseDate(forecastItem.dt)}}</div>
+				        <img class="space" ng-src="{{getIconUrl(forecastItem.weather[0].icon)}}" />
+				        <div class="space">{{forecastItem.temp.day}}&#176;C</div>
+				        <div class="space">{{forecastItem.weather[0].description}}</div>
 				    </div>
 				</div>
             </div>            
