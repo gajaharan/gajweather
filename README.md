@@ -47,3 +47,8 @@ Bootstrap is used to help with the design of the desktop and mobile version of t
 Gulp to help automate task such run unit tests, minifying third party libraries and stylesheets and Start the web server.
 
 Karma. I did not have time to full implement all tests units for controller, directive and service.
+
+## Design Descision
+For The desktop design I wanted the daily information for each day to be displayed vertically with minimal information. For future improvement I would like display more information on click e.g. wind speed, pressure, morning temp, evening temp, etc.
+
+For mobile design I wanted to ideally show the daily information as small cards with today's weather as the main big card with subsequent days as smaller cards below.
