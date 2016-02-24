@@ -4,6 +4,12 @@ body{
   margin: 0;  
 } 
 
+.error {
+  color: red;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .search-weather{
   margin-top:20px;
 }
