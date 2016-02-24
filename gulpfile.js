@@ -5,6 +5,7 @@ var mainBowerFiles = require('main-bower-files');
 var webserver = require('gulp-webserver');
 var uglify = require('gulp-uglifyjs');
 var minifyCSS = require('gulp-minify-css');
+var karmaServer = require('karma').server;
 
 var config = {
   scripts: {
@@ -46,12 +47,19 @@ gulp.task('lib', function() {
     .pipe(gulp.dest('./src/bundle'));
 });
 
+gulp.task('unit-test', function (done) {
+    karmaServer.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done);
+});
+
 gulp.task('webserver', function() {
   return gulp.src('./src')
     .pipe(webserver({reload: true, open: true}));
 });
 
-gulp.task('build', ['scripts', 'styles', 'lib']);
+gulp.task('build', ['scripts', 'styles', 'lib', 'unit-test']);
 
 gulp.task('default', ['webserver'], function() {
   gulp.watch(config.scripts.src, ['scripts']);
