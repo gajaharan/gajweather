@@ -27,7 +27,8 @@ $ bower install
     $ gulp unit-test
 ```
 
-## Run the app using gulp. Using the following command. This will automatically open a new browers on your [localhost:8000](http://localhost:8000) address.
+## Run the app using gulp. 
+Using the following command. This will automatically open a new browers on your [localhost:8000](http://localhost:8000) address.
 ```
     $ gulp
 ```
