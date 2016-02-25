@@ -2,7 +2,7 @@
 
 ## Live Version
 
-You can checkout the live version of the app [here](http://www.weather.gajaharan.com/index.html).
+You can checkout the live version of the app [here](http://www.gajaharan.com/gajweather/index.html).
 
 
 ## Installation
